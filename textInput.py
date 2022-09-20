@@ -109,6 +109,7 @@ sql = 'INSERT INTO リソース(System, リリースNO, Date, Time, CPU使用率
 ドライブH使用スペース, ドライブH残りスペース, \
 ドライブI使用スペース, ドライブI残りスペース)'
 
+sql_access = []
 
 #Iが入っているかどうか(要素数)で条件分岐
 for content in selectedList:
@@ -117,17 +118,19 @@ for content in selectedList:
         print('要素数:13')
         value = f'VALUES({content[0]}, {num}, {date}, time, 0, 0, 0, 0, {content[1]}, {content[2]}, {content[3]}, {content[4]}, {content[5]}, {content[6]}, {content[7]}, {content[8]}, {content[9]},{content[10]}, {content[11]}, {content[12]})'
         fullSql = sql + value 
-        p.pprint(fullSql)
+        sql_access.append(fullSql)
         
     elif(len(content) == 11):
         print(content[0])
         print('要素数:11')
         value = f'VALUES({content[0]}, {num}, {date}, time, 0, 0, 0, 0, {content[1]}, {content[2]}, {content[3]}, {content[4]}, {content[5]}, {content[6]}, {content[7]}, {content[8]}, {content[9]},{content[10]}, 0, 0)'
         fullSql = sql + value 
-        p.pprint(fullSql)
+        sql_access.append(fullSql)
         
     else:
         print('テキストファイルの内容を再度確認してください。')
     
 
+p.pprint(sql_access)
+p.pprint(len(sql_access))
 
