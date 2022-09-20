@@ -1,8 +1,8 @@
 #取得したテキストから情報を抽出する
 import re
 import pprint as p
-import data as d
-import select as select
+import function.data as d
+import function.select as select
 
 # ファイルからデータ取得
 # 1行ずつ読み込む
