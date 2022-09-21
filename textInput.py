@@ -1,5 +1,4 @@
 #取得したテキストから情報を抽出する
-import re
 import pprint as p
 import function.data as d
 import function.select as select
