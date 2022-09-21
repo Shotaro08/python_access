@@ -23,13 +23,13 @@ list = textInput.textInput(url)
 selectedList = selectList.selectList(list)
 
 
-# #SQL文作成 入力した日付を渡す
-sqlList = selectdata.selectdata(selectedList, date)
+# # #SQL文作成 入力した日付を渡す
+# sqlList = selectdata.selectdata(selectedList, date)
 
-for sql in sqlList:
-    print(sql)
+# for sql in sqlList:
+#     print(sql)
 
-input()
+# input()
 
 
 
